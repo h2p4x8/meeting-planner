@@ -10,6 +10,6 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+git push -f https://github.com/h2p4x8/meeting-planner.git master:gh-pages
 
 cd -

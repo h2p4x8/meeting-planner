@@ -10,8 +10,8 @@
         <input name="name" v-model="user.name"  type="text">
       </div>
       <div class='column'>
-        <label for="name">Фамилия:</label>
-        <input name="name" v-model="user.surname"  type="text">
+        <label for="surname">Фамилия:</label>
+        <input name="surname" v-model="user.surname"  type="text">
       </div>
       <div class="row">
         <v-btn @click="$emit('createUser', user)">Создать</v-btn>
