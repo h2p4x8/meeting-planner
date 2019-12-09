@@ -84,12 +84,15 @@ export default {
   props: ['users', 'userDisabled'],
   methods: {
     checkAvailability(){
+      if (this.meeting.timeFrom >  this.meeting.timeTo) {
+        this.meeting.timeTo = this.meeting.timeFrom
+      }
       if (this.meeting.timeFrom&&this.meeting.timeTo) this.$emit('checkAvailability', this.meeting.timeFrom, this.meeting.timeTo);
     }
   },
   beforeUpdate(){
     if (this.userDisabled.length > 0) this.meeting.participants = this.meeting.participants.filter(el => !this.userDisabled.some(part => part.id === el.id) )
-  }
+  },
 };
 </script>
 
